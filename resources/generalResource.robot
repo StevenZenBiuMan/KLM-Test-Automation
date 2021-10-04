@@ -57,7 +57,7 @@ Scroll Down To Element
   
 Handle Feedback Popup 
    # The Feedback popup around 95 sec
-   ${present}=  Run Keyword And Return Status    Wait Until Page Contains  No  timeout=40
+   ${present}=  Run Keyword And Return Status    Wait Until Page Contains  No  timeout=20
    Log    ${present}
    Run Keyword If    ${present}==${TRUE}  Click Text  No
    

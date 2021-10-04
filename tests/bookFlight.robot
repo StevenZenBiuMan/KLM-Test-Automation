@@ -42,20 +42,17 @@ Book flight from Dusseldorf to Hong Kong
   Click Element  id=${chooseDateButton} 
   
   # Pick a date
-  Wait Until Element Is Visible  id=${ANDROID_APP_PACKAGE}:id/week_day_one  timeout=5
-  Click Element  xpath=//android.widget.TextView[@bounds='[56,2014][246,2136]']
+  Wait And Click Xpath  ${ANDROID_APP_PACKAGE}:id/week_day_one  //android.widget.TextView[@bounds='[56,2014][246,2136]']
   Click Element  xpath=//android.widget.TextView[@bounds='[1194,2220][1384,2342]']
   Wait Until Element Is Visible  id=${calendarConfirmButton}  timeout=2
   Click Element  id=${calendarConfirmButton}
   
   # Outbound overview
-  Wait Until Element Is Visible  id=${ANDROID_APP_PACKAGE}:id/flight_card_outbound_time  timeout=5
-  Click Element  xpath=${xpathFlightTime}
+  Wait And Click Xpath  ${ANDROID_APP_PACKAGE}:id/flight_card_outbound_time  ${xpathFlightTime}
   Wait And Click Id  ${selectButton}
   
   # Return Flight overview
-  Wait Until Element Is Visible  id=${ANDROID_APP_PACKAGE}:id/flight_list_card_view  timeout=5
-  Click Element  xpath=${xpathFlightTime}
+  Wait And Click Xpath  ${ANDROID_APP_PACKAGE}:id/flight_list_card_view  ${xpathFlightTime}
   Wait And Click Id  ${selectButton}
 
   # Overview flight

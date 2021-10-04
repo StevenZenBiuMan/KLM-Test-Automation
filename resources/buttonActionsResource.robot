@@ -7,3 +7,7 @@ Wait And Click Id
   Wait Until Element Is Visible  id=${target}  timeout=10
   Click Element  id=${target}
     
+Wait And Click Xpath
+  [Arguments]  ${target}  ${xpath}
+  Wait Until Element Is Visible  id=${target}
+  Click Element  xpath=${xpath}

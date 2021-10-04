@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.7.5 on win32)" generated="20211004 09:00:53.979" rpa="false" schemaversion="2">
+<suite id="s1" name="KLM-Mobile-App" source="C:\Users\szenb\sandbox\KLM-Mobile-App">
+<suite id="s1-s1" name="Tests" source="C:\Users\szenb\sandbox\KLM-Mobile-App\tests">
+<suite id="s1-s1-s1" name="bookFlight" source="C:\Users\szenb\sandbox\KLM-Mobile-App\tests\bookFlight.robot">
+<test id="s1-s1-s1-t1" name="Book flight from Dusseldorf to Hong Kong">
+<kw name="Setup" library="generalResource" type="SETUP">
+<kw name="Open Android Test App" library="generalResource">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=com.klm.mobile.android.core.activity.SplashScreenActivity</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>autoDismissAlerts=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211004 09:01:14.548" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20211004 09:01:14.543" endtime="20211004 09:01:14.549"/>
+</kw>
+<msg timestamp="20211004 09:01:14.551" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211004 09:01:14.553" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20151ms.
+</msg>
+<status status="FAIL" starttime="20211004 09:00:54.279" endtime="20211004 09:01:14.554"/>
+</kw>
+<status status="FAIL" starttime="20211004 09:00:54.279" endtime="20211004 09:01:14.555"/>
+</kw>
+<kw name="Wait And Click Id" library="buttonActionsResource">
+<arg>${countrySpinner}</arg>
+<status status="NOT RUN" starttime="20211004 09:01:14.555" endtime="20211004 09:01:14.556"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=${searchBar}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20211004 09:01:14.556" endtime="20211004 09:01:14.556"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=${searchBar}</arg>
+<arg>Ne</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211004 09:01:14.558" endtime="20211004 09:01:14.559"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Netherlands</arg>
+<arg>timeout=2</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="NOT RUN" starttime="20211004 09:01:14.560" endtime="20211004 09:01:14.561"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>Netherlands</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20211004 09:01:14.561" endtime="20211004 09:01:14.562"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>Continue</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20211004 09:01:14.563" endtime="20211004 09:01:14.563"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Get started</arg>
+<arg>timeout=2</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="NOT RUN" starttime="20211004 09:01:14.564" endtime="20211004 09:01:14.565"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>Get started</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20211004 09:01:14.565" endtime="20211004 09:01:14.566"/>
+</kw>
+<status status="FAIL" starttime="20211004 09:00:54.278" endtime="20211004 09:01:14.567"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211004 09:01:14.572" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20211004 09:01:14.569" endtime="20211004 09:01:14.574"/>
+</kw>
+<msg timestamp="20211004 09:01:14.578" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211004 09:01:14.583" level="INFO">Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 22, in close_application
+    self._debug('Closing application with session id %s' % self._current_application().session_id)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 367, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 791, in _send_to_server_json
+    self.decoder_encoder._write('{"%s": %s}' % (name, json_encoded_obj))
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 847, in _write
+    self._file_to_write.flush()
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\socket.py", line 607, in write
+    return self._sock.send(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 22, in close_application
+    self._debug('Closing application with session id %s' % self._current_application().session_id)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 367, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 54, in run
+    return_value = self._run(context, kw.args)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 77, in _run
+    return self._run_with_output_captured_and_signal_monitor(runner, context)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 99, in _run_with_output_captured_and_signal_monitor
+    return self._run_with_signal_monitoring(runner, context)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 104, in _run_with_signal_monitoring
+    return runner()
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 92, in &lt;lambda&gt;
+    return lambda: handler(*positional, **named)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 31, in capture_page_screenshot
+    if hasattr(self._current_application(), 'get_screenshot_as_file'):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 367, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 782, in _send_to_server
+    self.decoder_encoder.dump(packet)
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 840, in dump
+    self._write(self._json_encoder(obj))
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 847, in _write
+    self._file_to_write.flush()
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\socket.py", line 607, in write
+    return self._sock.send(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 22, in close_application
+    self._debug('Closing application with session id %s' % self._current_application().session_id)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 367, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 54, in run
+    return_value = self._run(context, kw.args)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 77, in _run
+    return self._run_with_output_captured_and_signal_monitor(runner, context)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 99, in _run_with_output_captured_and_signal_monitor
+    return self._run_with_signal_monitoring(runner, context)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 104, in _run_with_signal_monitoring
+    return runner()
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 92, in &lt;lambda&gt;
+    return lambda: handler(*positional, **named)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 31, in capture_page_screenshot
+    if hasattr(self._current_application(), 'get_screenshot_as_file'):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 367, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 791, in _send_to_server_json
+    self.decoder_encoder._write('{"%s": %s}' % (name, json_encoded_obj))
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 847, in _write
+    self._file_to_write.flush()
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\socket.py", line 607, in write
+    return self._sock.send(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 22, in close_application
+    self._debug('Closing application with session id %s' % self._current_application().session_id)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 367, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 54, in run
+    return_value = self._run(context, kw.args)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 77, in _run
+    return self._run_with_output_captured_and_signal_monitor(runner, context)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 99, in _run_with_output_captured_and_signal_monitor
+    return self._run_with_signal_monitoring(runner, context)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 104, in _run_with_signal_monitoring
+    return runner()
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 92, in &lt;lambda&gt;
+    return lambda: handler(*positional, **named)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 31, in capture_page_screenshot
+    if hasattr(self._current_application(), 'get_screenshot_as_file'):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 367, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\Lib\site-packages\AppiumLibrary\keywords\_runonfailure.py", line 62, in _run_on_failure
+    BUILTIN.run_keyword(self._run_on_failure_keyword)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\BuiltIn.py", line 1869, in run_keyword
+    return kw.run(self._context)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\model.py", line 78, in run
+    return KeywordRunner(context, run).run(self)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\bodyrunner.py", line 65, in run
+    return runner.run(step, context, self._run)
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\librarykeywordrunner.py", line 56, in run
+    return return_value
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\running\statusreporter.py", line 65, in __exit__
+    raise failure
+robot.errors.HandlerExecutionFailed: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 782, in _send_to_server
+    self.decoder_encoder.dump(packet)
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 840, in dump
+    self._write(self._json_encoder(obj))
+  File "C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py", line 847, in _write
+    self._file_to_write.flush()
+  File "C:\Users\szenb\AppData\Local\Programs\Python\Python37\lib\socket.py", line 607, in write
+    return self._sock.send(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.585" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20211004 09:01:14.568" endtime="20211004 09:01:14.586">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20211004 09:00:54.278" endtime="20211004 09:01:14.587">Setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20151ms.
+
+
+Also teardown failed:
+No application is open</status>
+</test>
+<doc>KLM Login</doc>
+<status status="FAIL" starttime="20211004 09:00:54.094" endtime="20211004 09:01:14.589"/>
+</suite>
+<status status="FAIL" starttime="20211004 09:00:54.092" endtime="20211004 09:01:14.592"/>
+</suite>
+<status status="FAIL" starttime="20211004 09:00:54.063" endtime="20211004 09:01:14.594"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="KLM-Mobile-App">KLM-Mobile-App</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">KLM-Mobile-App.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="bookFlight">KLM-Mobile-App.Tests.bookFlight</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211004 09:01:14.551" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211004 09:01:14.557" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.559" level="ERROR">Calling method 'start_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.559" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.560" level="ERROR">Calling method 'start_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.561" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.562" level="ERROR">Calling method 'start_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.563" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.563" level="ERROR">Calling method 'start_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.564" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.564" level="ERROR">Calling method 'start_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.565" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.566" level="ERROR">Calling method 'start_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.566" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.568" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.569" level="ERROR">Calling method 'start_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.570" level="ERROR">Calling method 'start_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.573" level="ERROR">Calling method 'log_message' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.575" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.582" level="ERROR">Calling method 'log_message' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.578" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211004 09:01:14.584" level="ERROR">Calling method 'log_message' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.586" level="ERROR">Calling method 'log_message' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.587" level="ERROR">Calling method 'end_keyword' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.588" level="ERROR">Calling method 'end_test' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.591" level="ERROR">Calling method 'end_suite' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.593" level="ERROR">Calling method 'end_suite' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+<msg timestamp="20211004 09:01:14.595" level="ERROR">Calling method 'end_suite' of listener 'C:\Users\szenb\AppData\Local\Temp\RobotTempDir15084775793600746340\TestRunnerAgent.py' failed: ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</msg>
+</errors>
+</robot>

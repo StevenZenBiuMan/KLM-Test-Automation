@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <projectConfiguration>
     <configVersion>2</configVersion>
-    <robotExecEnvironment path="C:/Users/szenb/AppData/Local/Programs/Python/Python37" interpreter="Python"/>
     <relativeTo>WORKSPACE</relativeTo>
     <variable name="${ENVIRONMENT}" value="kwarts-1"/>
     <referencedLibrary type="PYTHON" name="AppiumLibrary" path="C:/Users/szenb/AppData/Local/Programs/Python/Python37/Lib/site-packages/AppiumLibrary/__init__.py" dynamic="false"/>

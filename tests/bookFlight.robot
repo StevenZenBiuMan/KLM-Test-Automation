@@ -69,9 +69,10 @@ Book flight from Dusseldorf to Hong Kong
   # First name
   ${name}=  Generate Random Name
   Wait Until Element Is Visible  id=${ANDROID_APP_PACKAGE}:id/bf_form_text_input_edit_text  timeout=5
-  Input Text In EditText Element  First name  ${name}  
-  Scroll Down To Element  ${checkBox}  
-  Handle Feedback Popup  
+  Input Text In EditText Element  First name  ${name}   
+  Scroll Down To Element  ${ANDROID_APP_PACKAGE}:id/bf_form_loyalty_title
+  Handle Feedback Popup
+  Wait Until Element Is Visible  ${checkBox}  timeout=5
   Input Text In EditText Element  Last name  ${name} 
   # Email
   Input Text In EditText Element  E-mail address  zs.redomk@dyoeii.com
